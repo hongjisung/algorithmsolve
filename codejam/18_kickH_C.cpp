@@ -21,27 +21,6 @@ sigma (r = 0 to m) 2^r * (2N-r)! * mCr * (-1)^r
 
 */
 
-long long twoover(long long n){
-    long long re = 1;
-    for(long long i=0; i<n; i++){
-        re<<=1;
-        if(re>div){
-            re%=div;
-        }
-    }
-    return re;
-}
-
-long long factorial(long long n){
-    long long re = 1;
-    for(long long i=2; i<=n; i++){
-        re*=i;
-        if(re>div){
-            re%=div;
-        }
-    }
-    return re;
-}
 
 long long euclid(long long a, long long b){
     long long a1 = 1, a2 = 0, a3 = a;
@@ -85,8 +64,8 @@ int main(){
 
         long long total = 0;
         for(long long r=0; r<=M; r++){
-            // cout<<"twoover " << r <<" " << twoover(r) << "\n";
-            // cout<<"factorial " << 2*N-r <<" " << factorial(2*N-r) << "\n";
+            // cout<<"twoover " << r <<" " << two[r] << "\n";
+            // cout<<"factorial " << 2*N-r <<" " << fact[2*N-r] << "\n";
             // cout<<"mCr " << M << " " << r << " " << mCr(M,r) << "\n";
             // cout<<"r&1 " << r << " " << ((r&1)==1?-1:1) << "\n";
             // cout<<"result : "<<( ( ( twoover(r) * fact(2*N-r) ) % div * mCr(M,r) ) % div * ((r&1)==1?-1:1) ) % div<<"\n";
